@@ -7,14 +7,14 @@ on:
   push:
     branches:
       - '*'
+    paths:
+      - 'anti-patterns/**'
   pull_request:
     branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'anti-patterns/*')
-
 
     steps:
       - uses: actions/checkout@v4
@@ -35,8 +35,6 @@ jobs:
   
   test:
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'anti-patterns/*')
-
     needs: build
     steps:
       - uses: actions/checkout@v4
