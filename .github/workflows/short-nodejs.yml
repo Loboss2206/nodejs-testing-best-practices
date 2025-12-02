@@ -7,8 +7,6 @@ on:
   push:
     branches:
       - '*'
-    paths:
-      - 'anti-patterns/**'
   pull_request:
     branches: [master]
 
