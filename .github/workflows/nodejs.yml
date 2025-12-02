@@ -41,6 +41,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - run: npm i  
       - run: npm test
 
   test-nestjs:
@@ -53,4 +54,5 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - run: npm i  
       - run: npm run test:nestjs
