@@ -126,15 +126,15 @@ describe('/api', () => {
 
     // 🤔 Questionable-Pattern: Counting records in the DB. This means the test assuming it owns the
     // DB during the runtime
-    test('When querying for all orders, then get all of them back', async() => {
+    test('When querying for all orders, then get all of them back', async () => {
       //Arrange
       const orderToAdd = {
         userId: 1,
         productId: 2,
         externalIdentifier: `some-external-id-2`,
       };
-      await axiosAPIClient.post('/order',orderToAdd);
-      await axiosAPIClient.post('/order',orderToAdd);
+      await axiosAPIClient.post('/order', orderToAdd);
+      await axiosAPIClient.post('/order', orderToAdd);
 
       //Act
       const receivedResponse = await axiosAPIClient.get();
@@ -144,3 +144,4 @@ describe('/api', () => {
     });
   });
 });
+
