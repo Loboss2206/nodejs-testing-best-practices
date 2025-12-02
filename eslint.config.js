@@ -10,14 +10,16 @@ export default [
         extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
     }),
     {
-        files: ["*.ts", "*.tsx"],
-        parser: "@typescript-eslint/parser",
-        parserOptions: {
-            ecmaVersion: 2020,
-            sourceType: "module",
+        files: ["**/*.js", "**/*.ts"], // <-- extensions ici
+        languageOptions: {
+            parser: "@typescript-eslint/parser",
+            parserOptions: {
+                ecmaVersion: 2020,
+                sourceType: "module",
+            },
         },
         rules: {
-            // tes règles personnalisées ici
+            // tes règles ici
         },
     },
 ];
