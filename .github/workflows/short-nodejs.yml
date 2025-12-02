@@ -5,12 +5,14 @@ name: Node.js CI
 
 on:
   push:
-    branches-ignores:
-      - 'master'
+    branches-ignore:
+      - master
     paths:
       - 'anti-patterns/**'
   pull_request:
-    branches-ignore: [master]
+    branches-ignore:
+      - master
+
 
 jobs:
   build:
